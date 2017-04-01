@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit contacts</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/spacelab/bootstrap.min.css" > -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="contacts.css" type="text/css">
+  </head>
+  <body>
+
+    <!-- Add a nav bar with bootstrap -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button class='collapsed navbar-toggle' data-toggle="collapse" type="button" data-target="navy-nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="home.html" class='navbar-brand'>Home</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navy-nav">
+      <ul class="nav navbar-nav pull-right">
+        <li><a href="addContact.html">Add Contacts</a></li>
+        <li><a href="editContact.html">Edit Contacts</a></li>
+        <li><a href="deleteContact.html">Delete Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12" style="height: 50px">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <h1 id="contact-page">Edit A Contact</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <!-- Add a table to display the names -->
+        <form>
+          <div class="form-group">
+            <label for="search" class="sr-only">Search</label>
+            <input type="search" id="search" class="form-control" placeholder="Search My Contacts"/>
+          </div>
+        </form>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Picture</th>
+              <th>Name</th>
+              <th>Number</th>
+            </tr>
+          </thead>
+          <tbody id="editing-table">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-xs-1">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="modal fade col-xs-8 col-xs-offset-2" id="edit-modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1>Edit Contact</h1>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                  <form class="form-horizontal" id="editForm">
+                    <div class="form-group">
+                      <label for="contact-new-first-name" required class="sr-only">First Name</label>
+                      <input type="text" class="form-control col-xs-6" id="contact-new-first-name"/>
+                      <label for="contact-new-last-name" class="sr-only">Last Name</label>
+                      <input type="text" class="form-control col-xs-6" id="contact-new-last-name" placeholder="Doe"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="contact-new-number" class="sr-only">Number</label>
+                      <input type="tel" class="form-control" id="contact-new-number" required placeholder="888-555-5555"pattern="\d{3}[\-]\d{3}[\-]\d{4}"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="contact-new-photo" class="input-label">Photo</label>
+                      <input type="text" id="contact-new-photo" placeholder="Image URL here"class="form-control"/>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-success" data-dismiss="modal" id="saveChanges">Save Changes</button>
+                <button class="btn btn-danger" data-dismiss="modal" id="cancelChanges">Cancel Changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="contacts.js"></script>
+  </body>
+  </html>
